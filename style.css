@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    transition: all .2s;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all .2s;
+    font-family: "Microsoft JhengHei";
+}
+
+.addTicketContainer{
+    /* 補上不同瀏覽器前綴 */
+    box-shadow: 0px 3px 6px #00000029;
+    -webkit-box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+
+    display: -webkit-box;
+    display: flex;
+
+    /* 當主軸空間不夠會換下一行 */
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    /* 圖片跟表單平分空間 */
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+   
+    /* justify-content:center; 也可以*/
+
+    /* 最大920但是可以跟著畫面縮小 */
+    max-width: 920px;
+
+    /* 上 左右(注意平分通常用自適應) 下 */
+    margin: 120px auto 100px;
+
+   /* 上下距離box-shadow有空間 */
+    padding: 60px 0; 
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 21px;
+}
+
+h1{
+    color: #00807e;
+}
+
+span{
+    margin-right: 2%;
+}
+
+.title{
+    border-bottom:3px solid #00807e;
+}
+
+
+.addTicketForm{
+    /* 先將form那層調整成主軸為直 */
+    display: -webkit-box;
+    display:flex;
+
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+
+}
+
+.addTicket_input {
+    /* 每一行都是label跟input要佔滿 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* 水平 */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    /* 垂直(內容基準) */
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+}
+
+
+/* label{
+    color: #00807e;
+    font-size: 16px;
+    list-style-type:none;
+    align-items: flex-start;
+} */
+
+.addTicketForm label {
+    color: #00807E;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+.addTicket_input input, .addTicket_input textarea, .addTicket_input select {
+    width: 72%;
+    text-indent: 0.5rem;
+    background-color: #F7F7F7;
+    color: #818A91;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #00807E;
+    min-height: 38px;
+}
+
+.addTicket_input textarea::-webkit-input-placeholder {
+    font-size: 16px;
+}
+  
+.addTicket_input textarea:-ms-input-placeholder {
+    font-size: 16px;
+}
+  
+.addTicket_input textarea::-ms-input-placeholder {
+    font-size: 16px;
+}
+  
+.addTicket_input textarea::placeholder {
+    font-size: 16px;
+}
+  
+.addTicket_input textarea {
+    padding-top: 8px;
+    min-height: 111px;
+}
+
+.addTicketForm .form_group{
+    margin-bottom: 16px;
+}
+
+
+/* input{
+    justify-content: center;
+    border: none;
+    border-bottom: 1px solid #00807e;;
+    background-color: #FAFAFA;
+    margin-top: 16px;
+    margin-left: 43px;
+    padding: 8px 0px 8px 12px  ;
+}
+
+textarea{
+    border: none;
+    border-bottom: 1px solid #00807e;;
+    background-color: #FAFAFA;
+    width: 255px;
+    height: 111px;
+    margin-top: 16px;
+    margin-left: 43px;
+    padding: 8px 0px 8px 12px;
+} */
+
+::placeholder {
+    color: #818a91;
+}
+
+input,textarea:focus{
+    /* 取消點擊時外面的框線 */
+    outline: none;
+}
+
+.btn{
+    width: 160px;
+    height: 48px;
+    margin-top: 10%;
+    background-color: #00807e;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+   
+    /* align-content 垂直多行 */
+    /* align-items 垂直單行 */
+    /* align-self 垂直單個元素 */
+}
+
+.btn:hover{
+    background-color: #64C3BF;
+}
+
+.showTicket{
+    background-color: #818a91;
+}
